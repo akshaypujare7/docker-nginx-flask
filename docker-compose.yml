@@ -2,7 +2,7 @@ version: "3.2"
 services:
   flask:
     build: ./app
-    image: kaw393939/flask:latest
+    image: akshaypujare7/flask:latest
     container_name: python
     restart: always
     environment:
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./app:/home/myuser
   nginx:
-    image: kaw393939/nginx:latest
+    image: akshaypujare7/nginx:latest
     build: ./nginx
     container_name: nginx
     restart: always
