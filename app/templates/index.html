@@ -3,6 +3,12 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
@@ -12,39 +18,91 @@
 
 </head>
 <body>
-<div id="main_menu" class="darkblue make_bigger">
-    <h1><span class="red make_bigger papyrus">A</span>kshay's homepage</h1>
+<div class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">My first bootstrap website</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Index</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/porsche.jpeg') }}" height="500px" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/ferrari.jpeg') }}" height="500px" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/aston.jpeg') }}" height="500px" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Porsche</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">911 Carrera</h6>
+                            <p class="card-text">The shape of the 911 Carrera is unmistakable because of its iconic
+                                flyline and elegant roof lines.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ferrari</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">488 Pista</h6>
+                            <p class="card-text">The Ferrari 488 (Type F142M) is a mid-engine sports car produced by the
+                                Italian automobile manufacturer Ferrari. </p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Aston Martin</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">DB 11</h6>
+                            <p class="card-text">The Aston Martin DB11 delivers the looks and sportiness expected of
+                                high-dollar grand tourers and offers a convertible top or a V-12.
+                            </p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<div id="main_content">
-    <p>
-        <span class="darkblue make_bigger papyrus">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Id eu nisl nunc mi ipsum. Enim nunc faucibus a pellentesque sit. Viverra maecenas accumsan lacus vel
-    facilisis. Sit amet dictum sit amet justo donec enim diam vulputate. Integer quis auctor elit sed. Mauris cursus
-    mattis molestie a iaculis at erat. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. A
-    condimentum vitae sapien pellentesque habitant morbi tristique senectus. Fusce id velit ut tortor pretium. Ipsum
-    suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Nisi lacus sed viverra tellus in hac habitasse.
-    Erat pellentesque adipiscing commodo elit at imperdiet dui. Tortor pretium viverra suspendisse potenti nullam ac.
-    Diam vulputate ut pharetra sit amet aliquam. Tristique nulla aliquet enim tortor at auctor. Neque convallis a cras
-    semper auctor neque vitae. Cras pulvinar mattis nunc sed blandit libero volutpat.
-    </p>
-    <p>
-    <span class="darkblue make_bigger papyrus">L</span>acus sed viverra tellus in. A diam maecenas sed enim ut sem viverra aliquet. Nibh sed pulvinar proin gravida.
-    Viverra justo nec ultrices dui. Eget nulla facilisi etiam dignissim diam quis enim. Nunc id cursus metus aliquam
-    eleifend mi in. Feugiat nisl pretium fusce id velit ut tortor pretium viverra. Sed euismod nisi porta lorem mollis
-    aliquam ut porttitor leo. Gravida dictum fusce ut placerat orci. Id volutpat lacus laoreet non curabitur gravida
-    arcu ac tortor. Fusce id velit ut tortor pretium viverra suspendisse potenti nullam. Elementum eu facilisis sed odio
-    morbi quis. Diam vel quam elementum pulvinar. Sed odio morbi quis commodo odio aenean sed. Volutpat est velit
-    egestas dui id ornare arcu odio ut. Consectetur adipiscing elit ut aliquam purus. Nibh nisl condimentum id venenatis
-    a condimentum. Mauris in aliquam sem fringilla. Consectetur purus ut faucibus pulvinar elementum integer enim.
-    </p>
-    <p>
-    <span class="darkblue make_bigger papyrus">V</span>iverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Vitae congue mauris rhoncus aenean vel elit
-    scelerisque mauris pellentesque. Ultrices dui sapien eget mi proin sed libero enim. Scelerisque eu ultrices vitae
-    auctor eu augue. Morbi tempus iaculis urna id volutpat. Porta non pulvinar neque laoreet suspendisse interdum
-    consectetur. Varius vel pharetra vel turpis nunc eget lorem dolor. Fermentum et sollicitudin ac orci phasellus. Orci
-    phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Nunc consequat interdum varius sit amet mattis
-    vulputate enim nulla. Aliquet enim tortor at auctor urna nunc id.
-    </p>
-</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

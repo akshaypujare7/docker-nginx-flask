@@ -12,3 +12,7 @@ body {
 .make_bigger{
     font-size: 140%;
 }
+
+.carousel-inner{
+  height: auto;
+}
